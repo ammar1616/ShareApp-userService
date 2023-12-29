@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const httpStatus = require('http-status-codes').StatusCodes;
 const { db, FieldValue } = require('../startup/firebase');
-const { validateUser, generateAuthToken } = require('../models/user.model');
+const { validateUser, generateAuthToken } = require('../validations/user');
 const reverseGeocodeWithOpenStreetMap = require('../helpers/location');
 
 const registerUser = async (req, res) => {

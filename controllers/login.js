@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
 const httpStatus = require('http-status-codes').StatusCodes;
 const { db, Filter, FieldValue } = require('../startup/firebase');
-const { generateAuthToken } = require('../models/user.model');
-const Auth = require('../models/auth.model');
+const { generateAuthToken } = require('../validations/user');
+const Auth = require('../validations/auth');
 
 const login = async (req, res) => {
   const { email, password } = req.body;
